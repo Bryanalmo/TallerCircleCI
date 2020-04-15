@@ -13,7 +13,7 @@ jobs:
            echo "A first hello"
            ls --all
            pwd 
-           echo "Finished"              
+           echo "Finished new"              
            scp -o StrictHostKeyChecking=no .circleci/Production/index.html ubuntu@ec2-3-226-245-180.compute-1.amazonaws.com:/var/www/html
 
   "Development Environment":
