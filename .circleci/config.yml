@@ -1,5 +1,5 @@
 jobs:
-  productionEnvironment:
+  "productionEnvironment":
     docker:
       - image: circleci/openjdk
     steps:
@@ -16,7 +16,7 @@ jobs:
            echo "Finished new"              
            scp -o StrictHostKeyChecking=no .circleci/index.html ubuntu@3.219.35.180:/var/www/html/index.html
 
-  developmentEnvironment:
+  "developmentEnvironment":
     docker:
       - image: circleci/openjdk
     steps:
@@ -34,14 +34,14 @@ jobs:
            scp -o StrictHostKeyChecking=no .circleci/index.html ubuntu@3.226.245.180:/var/www/html/index.html
 workflows:
   version: 2
-  normal_run:
+  build:
     jobs:
-      - developmentEnvironment:
+      - "developmentEnvironment":
           filters:
             branches:
               only:
                 - master
-      - productionEnvironment:
+      - "productionEnvironment":
           filters:
             branches:
               only:
