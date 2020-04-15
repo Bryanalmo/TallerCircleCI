@@ -37,7 +37,7 @@ workflows:
   version: 2
   build: 
     jobs:
-      - "Production Environment"
+      - "Production Environment":
           filters:
             branches:
               only:
