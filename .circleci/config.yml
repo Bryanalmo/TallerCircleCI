@@ -32,6 +32,7 @@ jobs:
            pwd 
            echo "Finished new x3"              
            scp -o StrictHostKeyChecking=no .circleci/index.html ubuntu@3.226.245.180:/var/www/html/index.html
+           
 
 workflows:
   version: 2
@@ -42,10 +43,6 @@ workflows:
             branches:
               only:
                 - master
-      - request-testing:
-          type: approval
-          requires:
-            - developmentEnvironment
       - productionEnvironment:
           requires:
             - request-testing
