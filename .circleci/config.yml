@@ -31,7 +31,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished"              
-           scp -o StrictHostKeyChecking=no .circleci/Development/index.html ubuntu@3.226.245.180:/var/www/html
+           scp -o StrictHostKeyChecking=no .circleci/Development/index.html ubuntu@3.226.245.180:/var/www/htmls
 
 workflows:
   version: 2
