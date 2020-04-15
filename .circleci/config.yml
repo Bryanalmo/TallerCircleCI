@@ -44,4 +44,4 @@ workflows:
             - DevelopmentEnvironment
       - ProductionEnvironment:
           requires:
-            - ProductionEnvironment
+            - request-testing
