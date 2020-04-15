@@ -42,8 +42,6 @@ workflows:
               only:
                 - master
       - productionEnvironment:
-          requires:
-            - request-testing
           filters:
             branches:
               only:
