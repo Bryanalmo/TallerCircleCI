@@ -38,4 +38,12 @@ workflows:
   build: 
     jobs:
       - "Production Environment"
-      - "Development Environment"
+          filters:
+            branches:
+              only:
+                - master
+      - "Development Environment":
+          filters:
+            branches:
+              only:
+                - master
