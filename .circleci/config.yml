@@ -41,9 +41,6 @@ workflows:
             branches:
               only:
                 - master
-      - request-testing:
-          requires:
-            - developmentEnvironment
       - productionEnvironment:
           requires:
             - request-testing
