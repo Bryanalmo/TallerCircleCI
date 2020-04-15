@@ -42,7 +42,6 @@ workflows:
               only:
                 - master
       - request-testing:
-          type: approval
           requires:
             - developmentEnvironment
       - productionEnvironment:
