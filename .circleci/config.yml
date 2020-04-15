@@ -14,7 +14,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished new"              
-           scp -o StrictHostKeyChecking=no .circleci/Production/index.html ubuntu@3.219.35.180:/var/www/html/index.html
+           scp -o StrictHostKeyChecking=no .circleci/index.html ubuntu@3.219.35.180:/var/www/html/index.html
 
   "Development Environment":
     docker:
@@ -31,7 +31,7 @@ jobs:
            ls --all
            pwd 
            echo "Finished new x2"              
-           scp -o StrictHostKeyChecking=no .circleci/Development/index.html ubuntu@3.226.245.180:/var/www/html/index.html
+           scp -o StrictHostKeyChecking=no .circleci/index.html ubuntu@3.226.245.180:/var/www/html/index.html
 
 workflows:
   version: 2
