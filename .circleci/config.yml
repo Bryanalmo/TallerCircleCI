@@ -43,6 +43,10 @@ workflows:
             branches:
               only:
                 - master
+      - request-testing:
+          type: approval
+          requires:
+            - developmentEnvironment
       - productionEnvironment:
           requires:
             - request-testing
